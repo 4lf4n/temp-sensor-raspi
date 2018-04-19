@@ -20,10 +20,15 @@ agar tidak selalu menjalankan perintah tersebut ketika reboot raspberry pi, maka
 `w1-gpio
 w1-therm`
 
-## tes output 
+## Tes output 
 untuk melakukan tes apakah rapsberry pi sudah dapat membaca temperatur yang dihasilkan oleh sensor DS18B20 jalankan perintah:
 `$ cd /sys/bus/w1/devices/`
 cek informasi serial number sensor suhu dengan perintah ls, maka akan terlihat informasi device misalnya **28-0516b0670bff**,  masuk ke folder tersebut lalu jalankan perintah:
 `cat w1_slave`
-sensor DS18B20 secara periodik mencatat suhu di file w1_slave
+sensor DS18B20 secara periodik mencatat suhu di file w1_slave, **t=** memperlihatkan suhu yang tercatat.
+
+## Menampilkan suhu ke web
+saya anggap raspberry pi sudah terinstall web server, buat file temp.php untuk membaca data suhu yang tersimpan pada file w1_slave. pada temp.php ini saya mengirim data suhu ke web service iot https://iot.umsida.ac.id ($sh = file_get_contents('https://iot.umsida.ac.id/dev/api/key/**YOUR API KEY**/field/0/sts/'.$temp);), ini optional saja.
+kemudian buat file index.php untuk menampilkan suhu secara periodik
+ 
  
