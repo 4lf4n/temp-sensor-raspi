@@ -14,6 +14,7 @@ simpan dan reboot raspberry pi
 ## GPIO and Therm kernel modules
 sekarang kita aktifkan kernel modul untuk GPIO pin pada raspberry pi dan sensor temperatur DS18B20 dengan menjalankan perintah :
 `sudo modprobe w1-gpio`
+
 `sudo modprobe w1-therm`
 
 agar tidak selalu menjalankan perintah tersebut ketika reboot raspberry pi, maka kita edit file /etc/modules dan tambahkan perintah :
