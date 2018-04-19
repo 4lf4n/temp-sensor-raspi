@@ -2,7 +2,7 @@
 ## wiring DS18B20 with Raspberry Pi
 pertama kita harus melakukan konfigurasi raspberry pi dengan sensor suhu DS18B20. pada sensor suhu DS18B20 memiliki 3 kaki berwarna merah, kuning dan hitam, antara kabel warna merah dan kuning sambungkan dengan menggunakan resistor 10K oHm. kemudian jumper ketiga kabel tadi ke pin GPIO raspberry pi, jumper kabel merah ke pin GPIO 3V, kabel kuning ke GPIO 4 dan hitam ke GPIO GROUND.
 
-## Configure Raspberry Pi GPIO 4 from In/Out to onewire sonsor
+## Configure Raspberry Pi GPIO 4 from In/Out to onewire sensor
 ketik perintah berikut pada command line raspberry pi:
 
 `$ sudo nano /boot/config.txt`
